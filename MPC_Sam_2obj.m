@@ -12,7 +12,7 @@ Psi_i=zeros(Np*size(Ad,1),Np);
 psi_i=Bd;
 Psi_i(1:size(Ad,1),:)=psi_i*[eye(m), zeros(m,Np-1)];
     for k=1:Np+1
-        Phi_i(k*size(Ad,1)+1:(k+1)*size(Ad,1),:)=Phi_i((k-1)*size(Ad,1)+1:k*size(Ad,1),:)*Ad;            % Phi_i=A^i
+        Phi_i(k*size(Ad,1)+1:(k+1)*size(Ag,1),:)=Phi_i((k-1)*size(Ad,1)+1:k*size(Ad,1),:)*Ad;            % Phi_i=A^i
     end
 % Phi_i=[A; A*A; A*A*A ...]
     for k=1:Np-1
